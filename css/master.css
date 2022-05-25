@@ -1,0 +1,302 @@
+:root{
+    --main--color:#fb3417;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 80%;
+    padding-left: 10px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+
+/* start settings box */
+.setting-box {
+    position: fixed;
+    left: -270px;
+    top: 0;
+    background-color:rgb(255, 255, 255) ;
+    width: 270px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.setting-box.open{
+    left:0;
+}
+
+.setting-box .fa-gear{
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    padding: 8px 0;
+    width: 30px;
+    background-color: rgb(255, 255, 255) ;
+    text-align: center;
+    cursor: pointer;
+}
+
+.setting-box .settings-container .option-box {
+    padding: 25px;
+    margin: 15px;
+    background-color: rgba(51, 51, 51, 0.075);
+}
+
+
+/* start color option */
+.setting-box .settings-container .option-box h4{
+    text-align: center;
+    margin: 0;
+    color: rgb(85, 84, 84);
+    font-size: 15px;
+
+}
+
+.setting-box .settings-container .option-box .colors-list{
+list-style: none;
+text-align: center;
+padding: 0;
+}
+
+.setting-box .settings-container .option-box .colors-list li{
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.5;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.setting-box .settings-container .option-box .colors-list li.active{
+    
+    opacity: 1;
+}
+
+.setting-box .option-box .colors-list li:first-child{
+    background-color: #fb3417;
+}
+
+.setting-box .option-box .colors-list li:nth-child(2){
+    background-color: rgb(20, 201, 77);
+}
+
+.setting-box .option-box .colors-list li:nth-child(3){
+    background-color: rgb(8, 188, 224);
+}
+
+.setting-box .option-box .colors-list li:nth-child(4){
+    background-color: rgb(231, 219, 0);
+}
+
+.setting-box .option-box .colors-list li:nth-child(5){
+    background-color: rgb(228, 7, 180);
+}
+/* end color option */
+/* end settings box */
+
+
+/* start landing page */
+.landing-page{
+    min-height: 100vh;
+    background-image: url(../img/2.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.landing-page .overlay{
+    background-color: #00000091;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.header-area{
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;  
+    padding:10px ;
+}
+
+.header-area .logo{
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.header-area .logo span{
+    font-size: 25px;
+    color: var(--main--color);
+}
+
+.header-area .links{
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.header-area .links li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.header-area .links li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-area .links li a:hover,
+.header-area .lanks li a.active{
+    color: var(--main--color);
+}
+
+.introduction{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.introduction h1{
+    width: 100%;
+    font-size: 45px;
+    margin: 0 0 5px;
+}
+
+.introduction p{
+    line-height: 1.6;
+    font-size: 20px;
+    margin:0;
+}
+
+.introduction h1 span{
+    color: var(--main--color);
+}
+/* end landing page */
+
+
+/* start about us */
+.about-us{
+    
+    padding-top: 50px;
+    padding-bottom: 0px;
+    display: flex;
+}
+
+.about-us .info-box{
+    flex: 1;
+}
+
+.about-us .info-box h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main--color);
+}
+
+.about-us .info-box p{
+line-height: 1.6;
+color: rgb(100, 97, 97);
+margin: 0;
+font-size: 20px
+}
+
+.about-us .img-box{
+    flex: 1;
+    padding-left: 112px;
+    padding-top: 71px;
+    text-align: center;
+}
+
+.about-us .img-box img{
+    text-align: center;
+}
+
+/* end about us */
+
+
+/* start contact us*/
+.contact{
+    height: 100vh;
+    /* min-height: 600px; */
+    background-color: rgba(92, 89, 89, 0.068);
+    background-size: cover;
+    padding-top: 30px;
+    position: relative;
+}
+
+.contact h2{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main--color);
+}
+
+.contact form{
+    max-width: 43vw;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact form .left{
+    float: left;
+    width: 40%;
+}
+
+.contact form .right{
+    float: right;
+    width: 50%;
+}
+
+.contact form input:not([type="submit"]),
+.contact form textarea{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom:15px;
+    border: 1px solid #ccc;
+}
+
+.contact form input:not([type="submit"]):focus,
+.contact form textarea:focus{
+    outline: 1px solid var(--main--color);
+}
+
+.contact form input{
+    height: 40px;
+}
+
+.contact form textarea{
+    height: 195px;
+    margin-bottom: 2vw;
+}
+
+.contact form input[type="submit"]{
+    opacity: 0.5;
+    padding: 10px;
+    height: 58px;
+    width: 106%;
+    border-color: transparent;
+    background-color: var(--main--color);
+    color: white;
+    cursor: pointer;
+}
+
+.contact form input[type="submit"]:hover{
+    opacity: 1;
+}
+/* end contact us*/
+
